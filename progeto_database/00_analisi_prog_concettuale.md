@@ -69,7 +69,7 @@ Info sulle singole notizie riportate nella pagina dell'area protetta:
 - foto
 - testo
 
-## Quinto paragrafo
+## Quinto paragrafo: WIP - Aggiungere info della foto
 > Per chi desidera visitare l'area, il sistema deve fornire informazioni sui centri visita sufficienti
 > per facilitare l’organizzazione di visite e percorsi. Questo è un esempio.
 
