@@ -59,9 +59,14 @@ attuale e una guida assegnata tra quelle abilitate. I gestori del parco possono 
 storico delle visite effettuate in ogni anno, utile per analisi di mercato e miglioramento dei 
 servizi offerti. 
 
-## 1.2 Requisiti rivisti
+## 1.2 Glossario dei termini
 
-### 1.2.1 Frasi di carattere generale
+
+
+
+## 1.3 Requisiti rivisti
+
+### 1.3.1 Frasi di carattere generale
 Si vuole realizzare una base di dati per un'applicazione che raccoglie e organizza tutte le informazioni relative alle aree protette italiane.
 La base di dati deve permettere:
 - La consultazione di:

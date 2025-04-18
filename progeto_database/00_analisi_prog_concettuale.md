@@ -8,8 +8,11 @@
 
 ### Info estrapolate
 Informazioni sul sistema:
-- Raccogliere, organizzare informazioni sulle aree protette
-- Fornire strumenti per la pianificazione di visite.
+- Raccogliere e organizzare informazioni sulle aree protette in Italia.
+- Fornire strumenti per:
+  - Pianificazione di visite.
+  - Gestione delle aree protette.
+  - Gestione dei servizi forniti.
 
 ## Secondo paragrafo
 > Per ogni parco, il sistema memorizza dettagli come il codice identificativo, il nome, la regione
@@ -18,14 +21,15 @@ Informazioni sul sistema:
 > chilometri di costa e altre informazioni utili.
 
 ### Info estrapolate
-Dati dei parchi:
+Dati dei parchi/aree protette:
 - Codice Identificativo
 - Nome
 - Regione
 - Tipologia (Parco o riserva naturale)
 - Ente che gestisce il parco
 - Provvedimento che lo ha istituito
-- Superfici terrestre e marina
+- Superfice terrestre
+- Superfice marina
 - Km di costa
 - Eventuali altre info utili
 
@@ -37,8 +41,11 @@ Dati dei parchi:
 > promuove pratiche turistiche rispettose dell'ambiente e del patrimonio naturale.
 
 ### Info estrapolate
-- Parchi e aree protette sono sinonimi? Nel caso del secondo paragrafo **sì**. => Usare come nome **aree naturali protette**.
-- Classificazione del tipo di parchi / areee naturali estrapolate dal sito:
+> Le aree protette sono classificate in base al tipo, seguendo la classificazione ufficiale
+> (https://www.mase.gov.it/pagina/classificazione-delle-aree-naturali-protette).
+
+Informazioni sulle aree protette:
+- Classificazione del tipo di areee naturali estrapolate dal sito:
     - Parchi nazionali.
     - Parchi naturali regionali e interregionali
     - Riserve naturali
@@ -48,12 +55,14 @@ Dati dei parchi:
 
 > Inoltre, sul sito sono rappresentate come suddivise per regione
 
-Informazione fuorviante in quanto l'informazione è già presente nella area naturale.
+Informazioni sul sistema:
+- Il sistema offre una vista dei parchi raggrupata per regione nel sito.
 
 
 > Alcuni parchi partecipano a programmi di certificazione come la Carta Europea del Turismo Sostenibile (CETS)
 
-Si può pensare ad aggiungere un attributo per definire se partecipa al CETS.
+Informazioni sulle aree protette:
+- Partecipazione a programmi (0,N) di certificazione (es: CETS)
 
 ## Quarto paragrafo
 > Ogni sezione del sito dedicata ad una specifica area protetta ha una pagina dedicata alle
@@ -61,22 +70,50 @@ Si può pensare ad aggiungere un attributo per definire se partecipa al CETS.
 > novità.
 
 ### Info estrapolate
-Info sul sistema:
-- Ogni area protetta ha una pagina dedicata con le ultime notizie.
+> Ogni sezione del sito dedicata ad una specifica area protetta ha una pagina dedicata alle
+> ultime notizie, [...]
 
-Info sulle singole notizie riportate nella pagina dell'area protetta:
+Info sul sistema:
+- Ogni sezione del sito dedicata ad un'area protetta ha una pagina dedicata con le ultime notizie.
+
+> [...] complete di data, foto e testo, per tenere aggiornati gli utenti su eventi e
+> novità.
+
+Info sulle notizie:
 - data della notizia.
 - foto
 - testo
 
-## Quinto paragrafo: WIP - Aggiungere info della foto
+## Quinto paragrafo:
 > Per chi desidera visitare l'area, il sistema deve fornire informazioni sui centri visita sufficienti
 > per facilitare l’organizzazione di visite e percorsi. Questo è un esempio.
 
 ### Info estrapolate
+> Per chi desidera visitare l'area, il sistema deve fornire informazioni sui centri visita sufficienti
+> per facilitare l’organizzazione di visite e percorsi. [...]
+
 Info sul sistema:
-- Il sistema deve fornire per ogni area protetta informazioni sui centri visita 
+- Il sistema fornisce informazioni sui centri visita per ogni area protetta
   (luoghi di informazione e accoglienza per i visitatori).
+
+Info sul centro visita:
+- Nome
+- Titolo sommario
+- Indirizzo:
+  - Via
+  - Cap
+  - Comune
+  - Frazione
+  - Regione
+- Descrizione
+- Logo
+- Orari:
+  - Mesi di apertura
+  - Giorno sett. di apertura
+    - Range mattino
+    - Range pomeriggio
+- Modalità di fruizione
+
 
 ## Sesto paragrafo
 > Per chi cerca un posto dove alloggiare, il sistema elenca le strutture ricettive nelle vicinanze,
@@ -86,10 +123,8 @@ Info sul sistema:
 > del Turismo Sostenibile, garantendo un'esperienza rispettosa dell'ambiente.
 
 ### Info estrapolate
-Info sul sistema: <br/>
-- Per ogni area protetta (suppongo pagina di dettaglio), deve fornire info su strutture ricettive (0?,N)
-  (struttura che da la possibilità di trovare sistemazione + assistenza / servizi)
-- Ci possono essere 0 strutture ricettive nelle vicinanze?
+Info sul sistema:
+- Fornisce informazioni sulle strutture ricettive (0,N) per ogni area protetta.
 
 Info da avere per ogni str. ricettiva:
 - Nome
@@ -97,11 +132,11 @@ Info da avere per ogni str. ricettiva:
 - Contatti
 - Servizi offerti
 - Trattamenti disponibili 
-- Impegni ecologici? => Testo o booleano?
-- Se può ospitare scuole o gruppi
-- Se ha parcheggi adeguati? => si riferisce al fatto di ospitare gruppi? tipo gli scuolabus? # FIXME
-- Se aderiscono alla CETS (come le info sui parchi) =>
-    Ci sono parchi che aderiscono al CETS e str. ricettive che non ci aderiscono e viceversa suppongo
+- Impegni ecologici
+  - Adesione al CETS
+  - Altri impegni ecologici
+- Possibilità di ospitare scuole o gruppi
+  - Disponibilità di parcheggi adeguati
 
 ## Settimo paragrafo
 > I visitatori possono registrarsi sul sito creando un profilo con username e password, che
@@ -110,14 +145,19 @@ Info da avere per ogni str. ricettiva:
 > verificato la disponibilità, possono accettarle o meno.
 
 ### Info estrapolate
+> I visitatori possono registrarsi sul sito creando un profilo [...]
+> permette loro di inviare richieste di prenotazione alle strutture ricettive [...]
+> Le strutture ricevono queste richieste e [...] possono accettarle o meno.
+
 Info sul sistema:
-- Prevedere (0, N) utenti
-- Ogni utente richiede str. ricettiva (relazione di richiesta)
-- Le strutture ricevono le richieste e possono accettarle o no.
+- Prevede la gestione di (0,N) utenti
+- Possibilità di invio richieste di prenotazione alle strutture ricettive da parte degli utenti.
+
+> I visitatori possono registrarsi sul sito creando un profilo con username e password, [...]
 
 Info su ogni utente:
 - username
-- password (menzionare hash?)
+- password
 
 Info su relazione di richiesta utente-str.ricettiva:
 - Data di inizio soggiorno
@@ -125,7 +165,7 @@ Info su relazione di richiesta utente-str.ricettiva:
 - N. di ospiti
 - Stato di accettazione da parte della str. ricettiva
 
-## Ottavo paragrafo: WIP
+## Ottavo paragrafo:
 > Il sistema tiene traccia dei dati relativi alle presenze di ogni area protetta, registrando orari di
 > entrata e uscita, tipologia di utente (senior, bambini, gruppi scolastici, altri gruppi), itinerari
 > percorsi e feedback sotto forma di valutazioni a stelle per ogni percorso. Il sistema consente
@@ -134,20 +174,289 @@ Info su relazione di richiesta utente-str.ricettiva:
 > le valutazioni date alle guide.
 
 ### Info estrapolate
-Info sul sistema:
-- Deve tenere traccia dei dati di presenza nelle aree protette.
 
-Info sulle aree protette:
-- Ogni area protetta ha (?, N) itinerari al suo interno, i quali dati sono censiti
-  nei dati di presenza delle aree protette.
+> Il sistema tiene traccia dei dati relativi alle presenze di ogni area protetta [...]
+> [...] Inoltre, conserva i commenti postati sul sito del parco e
+> le valutazioni date alle guide.
+
+Info sul sistema:
+- Per ogni area protetta:
+  - Tiene traccia dei dati di presenza
+  - Conserva le valutazioni date dai visitatori a itinerari e guide.
+
+
+> [...] dati relativi alle presenze di ogni area protetta, registrando orari di
+> entrata e uscita, tipologia di utente (senior, bambini, gruppi scolastici, altri gruppi),
 
 Info sui dati di presenza nelle aree protette:
 - Orario di entrata
 - Orario di uscita
-- Tipologia di utente (senior, bambini, gruppi scolastici, altri gruppi)
-- Itinerari percorsi (sinonimo: percorsi)
-    - (?,N) => Va da 0? 
-    - Servono informazioni aggiuntive oltre che un testo?
+- Tipologia di visitatore:
+  - senior
+  - bambini
+  - gruppi scolastici
+  - altri gruppi
+- Itinerari percorsi (0, N)
+
+Info sulle aree protette:
+- Ogni area protetta ha (0, N) itinerari al suo interno.
+
+> [...] itinerari
+> percorsi e feedback sotto forma di valutazioni a stelle per ogni percorso
+> [...] Il sistema consente
+> ad ogni visitatore di esprimere un giudizio (in stelle), che aggiorna la valutazione degli
+> itinerari, e di lasciare un commento
 
 Info sui itinerari:
-- giudizio (sin: valutazione, feedback): in stelle (scelgo io quante)
+- Giudizio: 
+  - stelle
+  - commento
+
+> [...] Inoltre, conserva i commenti postati sul sito del parco e
+> le valutazioni date alle guide.
+
+Info sulle guide:
+- Guidizio:
+  - stelle
+  - commento
+
+## Nono paragrafo:
+> Il sistema permette di prenotare visite guidate in orari specifici con delle guide abilitate i cui 
+> estremi  (licenze,  itinerari  disponibili  per ciascuna guida, valutazioni da parte degli utenti 
+> passati, e calendario con le loro disponibilità) sono resi disponibili agli operatori turistici ed ai 
+> visitatori.  Ogni  itinerario  può  essere  associato  a  una  o  più  guide  abilitate, e il sistema 
+> mantiene un registro aggiornato delle guide disponibili in ogni momento. Nella pagina degli 
+> itinerari, viene mostrato il numero di guide abilitate e il numero di quelle disponibili. 
+
+### Info estrapolate:
+Info sul sistema:
+- Consentire la prenotazione di visite guidate in orari specifici .
+- Le visite guidate vanno fatte con delle guide
+- Mantiene un registro delle guide disponibili.
+- Pagina degli itinerari:
+  - Numero di guide abilitate
+  - Numero di guide disponibili
+
+Dati delle guide: resi disponibili a operatori turistici e visitatori.
+- Licenze
+- Itinerari disponibili
+- Valutazioni
+- Calendario con le loro disponibilità
+
+Dati degli itinerari:
+- (1, N) guide abilitate
+
+
+### Sinonimi trovati
+- Visite guidate = itinerari
+
+
+## Decimo paragrafo:
+> Per  quanto  riguarda  le  visite  guidate,  il  sistema  organizza  un  numero  definito  di  tour 
+> programmati per ogni itinerario, ciascuno con un numero massimo di partecipanti, uno stato 
+> attuale e una guida assegnata tra quelle abilitate. I gestori del parco possono consultare uno 
+> storico delle visite effettuate in ogni anno, utile per analisi di mercato e miglioramento dei 
+> servizi offerti.
+
+### Info estrapolate:
+Info sul sistema:
+- Organizza un numero definito di tour programmati per ogni itinerario.
+
+Informazioni sulle visite guidate:
+- Numero massimo di partecipanti
+- Stato attuale
+- 1 Guida assegnata
+- Presenza di Storico delle visite annuali
+
+
+### Sinonimi trovati
+- Tour <> Visite guidate
+
+# Informazioni
+
+## Informazioni sul sistema
+- Raccogliere e organizzare informazioni sulle aree protette in Italia.
+  - Il sistema offre una vista delle aree protette raggrupata per regione nel sito.
+  - Il sistema offre una vista di dettaglio delle aree protette.
+    - Ogni sezione del sito dedicata ad un'area protetta ha:
+      - Una pagina dedicata con le ultime notizie.
+      - Una pagina o area con informazioni sui centri visita.
+  - Tiene traccia dei dati di presenza.
+  - Conserva le valutazioni date dai visitatori a itinerari e guide.
+- Fornire strumenti per:
+  - Pianificazione di visite.
+  - Gestione delle aree protette.
+  - Gestione dei servizi forniti.
+- Fornisce informazioni sulle strutture ricettive (0,N) per ogni area protetta.
+- Prevede la gestione di (0,N) utenti
+- Possibilità di invio richieste di prenotazione alle strutture ricettive da parte degli utenti.
+
+
+## Informazioni sulle aree protette
+Dati delle aree protette:
+- Codice Identificativo
+- Nome
+- Regione
+- Tipologia:
+  - Parchi nazionali.
+  - Parchi naturali regionali e interregionali
+  - Riserve naturali
+  - Zone umide di interesse internazionale
+  - Altre aree naturali protette
+  - Aree di reperimento terrestri e marine
+- Ente che gestisce il parco
+- Provvedimento che lo ha istituito
+- Superfice terrestre
+- Superfice marina
+- Km di costa
+- Eventuali altre info utili
+- Partecipazione a programmi (0,N) di certificazione (es: CETS)
+- Presenza di (0, N) itinerari al suo interno.
+
+## Informazioni sulle notizie
+Dati delle notizie:
+- Data della notizia.
+- Foto
+- Testo
+
+## Informazioni sul centro visita
+Info sul centro visita:
+- Nome
+- Titolo sommario
+- Indirizzo:
+  - Via
+  - Cap
+  - Comune
+  - Frazione
+  - Regione
+- Descrizione
+- Logo
+- Orari:
+  - Mesi di apertura
+  - Giorno sett. di apertura
+    - Range mattino
+    - Range pomeriggio
+- Modalità di fruizione
+
+## Informazioni sulla struttura ricettiva
+Info da avere per ogni str. ricettiva:
+- Nome
+- Indirizzo
+- Contatti
+- Servizi offerti
+- Trattamenti disponibili 
+- Impegni ecologici
+  - Adesione al CETS
+  - Altri impegni ecologici
+- Possibilità di ospitare scuole o gruppi
+  - Disponibilità di parcheggi adeguati
+
+## Informazioni sugli utenti
+Info su ogni utente:
+- username
+- password
+
+## Informazioni sulle prenotazioni per le str. ricettive
+Info su relazione di richiesta utente-str.ricettiva:
+- Data di inizio soggiorno
+- Data di fine soggiorno
+- N. di ospiti
+- Stato di accettazione da parte della str. ricettiva
+
+## Informazioni sulle aree di presenza delle aree protette
+Info sui dati di presenza nelle aree protette:
+- Orario di entrata
+- Orario di uscita
+- Tipologia di visitatore:
+  - senior
+  - bambini
+  - gruppi scolastici
+  - altri gruppi
+- Itinerari percorsi (0, N)
+
+## Informazioni sugli itinerari
+
+Info sui itinerari:
+- Giudizio dei visitatori: 
+  - stelle
+  - commento
+
+## Informazioni sulle guide
+
+Info sulle guide:
+- Guidizio dei visitatori:
+  - stelle
+  - commento
+
+# Glossario dei termini
+<table>
+  <tr>
+    <th>Termine</th>
+    <th>Descrizione</th>
+    <th>Sinonimi</th>
+    <th>Collegamenti</th>
+  </tr>
+  <tr>
+    <td>Area Protetta</td>
+    <td>Territori ricchi di biodiversità e beni archeologici, storici architettonici e artistici.</td>
+    <td>Parco</td>
+    <td>Ente</td>
+  </tr>
+  <tr>
+    <td>Ente</td>
+    <td>Ente incaricato della gestione del parco.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Notizia</td>
+    <td>Notizie riguardanti le aree protette per tenere aggiornati gli utenti.</td>
+    <td>Novità</td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Centro Visita</td>
+    <td>Luoghi di informazione e accoglienza per i visitatori.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Struttura Ricettiva</td>
+    <td>Struttura che dà la possibilità di trovare sistemazione con eventuale fruizione di assistenza e/o servizi.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Visitatore</td>
+    <td>Persona che decide o ha l'interesse di visitare l'area protetta.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Utente</td>
+    <td>Visitatore registrato nel sistema che può effettuare delle prenotazioni alle strutture ricettive.</td>
+    <td>Profilo</td>
+    <td>Struttura Ricettiva, Visitatore</td>
+  </tr>
+  <tr>
+    <td>Itinerari</td>
+    <td>Descrive i percorsi disponibili all'interno di un'area protetta che possono essere percorsi da un visitatore.</td>
+    <td>Percorsi</td>
+    <td>Area Protetta, Visitatore</td>
+  </tr>
+  <tr>
+    <td>Guida</td>
+    <td>Professionista incaricato di accompagnare visitatori in visite guidate all'interno dell'area protetta.</td>
+    <td></td>
+    <td>Area Protetta, Visitatore</td>
+  </tr>
+  <tr>
+    <td>Giudizio</td>
+    <td>
+      Recensione fornita dai visitatori delle aree geografiche nei confronti degli intinerari e delle guide.
+      Consiste in una valutazione in stelle e un commento.
+    </td>
+    <td>Feedback, Valutazione</td>
+    <td>Area Protetta, Visitatore, Itinerari</td>
+  </tr>
+</table>
