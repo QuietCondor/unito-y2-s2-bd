@@ -197,57 +197,29 @@ servizi offerti.
 ### 1.3.1 Informazioni di carattere generale
 Si vuole realizzare una base di dati per un sistema che raccoglie e organizza tutte le informazioni relative alle aree protette italiane.
 
-La base di dati deve permettere al sistema di:
-- Visualizzare:
-    - Le aree protette raggruppate per regione.
-    - Informazioni di dettaglio delle aree protette con:
-        - Le ultime notizie.
-        - Informazioni sui centri visita.
-        - Itinerari.
-        - Lo storico delle visite guidate annuali.
-        - Informazioni sulle strutture ricettive.
-    - Informazioni di dettaglio degli itinerari di un'area protetta con:
-        - Guide disponibili.
-        - Guide abilitate.
-        - Valutazioni dei visitatori.
-    - I dati di presenza delle aree protette [[1]](#1312-dettagli-sui-dati-di-presenza-nelle-aree-protette).
-    - I dati delle guide.
-- Fornire strumenti per:
-    - Gestire visite guidate con guide abilitate. Con operazioni di:
-        - Pianificazione.
-        - Valutazioni a itinerari e guide.
-    - Organizzare visite guidate per ogni itinerario.
-    - Gestire le aree protette.
-    - Richiedere prenotazioni alle strutture ricettive.
-    - Gestire utenti registrati al sistema stesso.
+La base di dati deve permettere al sistema di visualizzare le aree protette raggruppate per regione e le informazioni di dettaglio delle 
+aree protette.
+
+Le informazioni di dettaglio delle aree protette devono contenere le ultime notizie, informazioni sui centri visita itinerari, storici
+delle visite guidate annuali e informazioni sulle strutture ricettive.
+
+Le informazioni di dettaglio degli itinerari devono contenere i dati di presenza delle aree protette [[1]](#1312-dettagli-sui-dati-di-presenza-nelle-aree-protette) e i dati delle guide come dati di Guide abilitate e valutazioni dei visitatori.
+
+Il sistema deve inoltre fornire gli strumenti per gestire visite guidate con guide abilitate, organizzare visite guidate per ogni itinerario
+gestire le aree protette, richiedere prenotazioni alle strutture ricettive e gestire utenti registrati al sistema stesso.
+
+Per quanto riguarda la gestione di visite guidate, deve essere possibile gestirne la pianificazione e le valutazioni a itinerari e guide.
 
 #### 1.3.1.2 Dettagli sui Dati di presenza nelle Aree Protette:
-Nei Dati di Presenza delle Aree Protette rappresentiamo:
-- Orario di entrata.
-- Orario di uscita.
-- Tipologia di Visitatore.
-- Itinerari percorsi.
+Nei Dati di Presenza delle Aree Protette rappresentiamo l'orario di entrata, l'orario di uscita, la tipologia di Visitatore e gli
+itinerari percorsi.
 
-Per tipologia di visitatore rappresentiamo come valori:
-- Senior.
-- Bambini.
-- Gruppi scolastici.
-- Altri gruppi.
+Per tipologia di visitatore rappresentiamo come valori: Senior, Bambini, Gruppi scolastici e Altri gruppi.
 
 ### 1.3.2 Informazioni relative alle Aree Protette
-Per Area Protetta rappresentiamo:
-- Codice Identificativo.
-- Nome.
-- Regione.
-- Tipologia.
-- Ente incaricato della gestione.
-- Provvedimento che ne ha portato l'istituzione.
-- Superfice terrestre.
-- Superfice marina.
-- Km di costa.
-- Eventuali altre informazioni utili.
-- Programmi di certificazione.
-- Itinerari al suo interno.
+Per Area Protetta rappresentiamo: Codice Identificativo, Nome,  Regione, Tipologia, Ente incaricato della gestione, Provvedimento che ne ha 
+portato l'istituzione, Superfice terrestre, Superfice marina, Km di costa, Eventuali altre informazioni utili, Programmi di certificazione, 
+Itinerari al suo interno.
 
 A supporto e integrazione delle definizioni e valori dei singoli campi, si utilizzerà il:
 - [sito ufficiale del ministero dell'ambiente e della sicurezza energetica](https://www.mase.gov.it/pagina/classificazione-delle-aree-naturali-protette)
@@ -256,22 +228,13 @@ presenti come fonte nei requisiti iniziali o derivati diretti da esse.
 
 Per Codice Identificativo, rappresentiamo i valori in formato alfanumerico.
 
-Per Tipologia, rappresentiamo i valori come:
-- Parchi nazionali.
-- Parchi naturali regionali e interregionali.
-- Riserve naturali.
-- Zone umide di interesse internazionale.
-- Altre aree naturali protette.
-- Aree di reperimento terrestri e marine.
+Per Tipologia, rappresentiamo i valori come: Parchi nazionali, Parchi naturali regionali e interregionali, Riserve naturali, Zone umide di interesse internazionale, Altre aree naturali protette e Aree di reperimento terrestri e marine.
 
 
 ### 1.3.3 Informazioni relative alle Notizie
 Le Notizie contengono informazioni relative ad aggiornamenti o eventi riguardo le Aree Protette.
 
-Per Notizia rappresentiamo:
-- Data.
-- Foto.
-- Testo.
+Per Notizia rappresentiamo: Data, Foto e Testo.
 
 Per quanto concerne la foto, si suppone che il sistema abbia integrazioni esterne per la storicizzazione
 delle immagini (es: Servizi in cloud come [Il blob storage di Azure](https://azure.microsoft.com/en-us/products/storage/blobs))
@@ -279,51 +242,24 @@ che consentono quindi al sistema di rappresentare la foto come semplice URL di r
 presenti su tali sistemi esterni.
 
 ### 1.3.4 Informazioni relative ai Centri Visita
-Per Centro Visita rappresentiamo:
-- Nome
-- Titolo sommario
-- Indirizzo
-- Descrizione
-- Logo
-- Orari
-- Modalità di fruizione
+Per Centro Visita rappresentiamo: Nome, Titolo sommario, Indirizzo, Descrizione, Logo, Orari e Modalità di fruizione.
 
-In cui:
-Per Indirizzo rappresentiamo:
-    - Via
-    - Cap
-    - Comune
-    - Frazione
-    - Regione
+Per Indirizzo rappresentiamo: Via, Cap, Comune, Frazione, Regione.
 
-Per Orari rappresentiamo:
-    - Mesi di apertura
-    - Giorno sett. di apertura
-        - Range orario di apertura al mattino
-        - Range orario di apertura al pomeriggio
+Per Orari rappresentiamo: Mesi di apertura e i Giorni settimanali di apertura.
+Per Ogni giorno di apertura rappresentiamo il range orario di apertura al mattino e il range orario di apertura al pomeriggio.
 
 In cui le informazioni di dettaglio di indirizzi e orari, sono inferite dall'immagine di esempio fornita
 nei [Requisiti iniziali](#11-requisiti-iniziali).
 
 ### 1.3.5 Informazioni relative alle Strutture Ricettive
-Per Struttura Ricettiva rappresentiamo:
-- Nome.
-- Indirizzo.
-- Contatti.
-- Servizi offerti.
-- Trattamenti disponibili.
-- Impegni ecologici.
-- Possibilità di ospitare scuole o gruppi
-  - Disponibilità di parcheggi adeguati
+Per Struttura Ricettiva rappresentiamo: Nome, Indirizzo, Contatti, Servizi offerti, Trattamenti disponibili, Impegni ecologici, Possibilità di ospitare scuole o gruppi e Disponibilità di parcheggi adeguati.
 
 In cui supponiamo che la struttura degli indirizzi sia la stessa vista e definita nelle
 [Informazioni relative ai Centri Visita](#134-informazioni-relative-ai-centri-visita).
 
 ### 1.3.6 Informazioni relative agli Utenti
-Per utente rappresentiamo:
-- Username.
-- Password. [[1]](#1361-dettagli-sulla-password)
-- Ruolo. [[2]](#1362-dettagli-sui-ruoli-degli-utenti)
+Per utente rappresentiamo: Username, Password [[1]](#1361-dettagli-sulla-password) e Ruolo [[2]](#1362-dettagli-sui-ruoli-degli-utenti). 
 
 Gli Utenti sono in grado di effettuare recensioni di Itinerari e Guide ed effettuare
 delle prenotazioni nelle strutture ricettive [[3]](#1363-dettagli-sulle-prenotazioni-di-strutture-ricettive).
@@ -332,10 +268,7 @@ delle prenotazioni nelle strutture ricettive [[3]](#1363-dettagli-sulle-prenotaz
 Per Password rappresentiamo un hash o un'informazione crittografata in quanto assumiamo che per motivi di sicurezza non venga salvata la password in chiaro.
 
 #### 1.3.6.2 Dettagli sui Ruoli degli Utenti
-Per Ruolo rappresentiamo come valori possibili:
-- Gestore del Parco
-- Operatore Turistico
-- Visitatore Registrato
+Per Ruolo rappresentiamo come valori possibili: Gestore del Parco, Operatore Turistico e Visitatore Registrato
 
 In quanto si inferisce dal testo che i diversi ruoli hanno significati distinti:
 - Gestore del parco: Consente la consultazione degli storici sulle visite delle aree protette.
@@ -344,34 +277,27 @@ In quanto si inferisce dal testo che i diversi ruoli hanno significati distinti:
                          sulla piattaforma.
 
 #### 1.3.6.3 Dettagli sulle Prenotazioni di Strutture Ricettive
-Per la richiesta di Prenotazione di una Struttura ricettiva rappresentiamo:
-- Data di inizio soggiorno.
-- Data di fine soggiorno.
-- N. di ospiti.
-- Stato di accettazione da parte della Struttura Ricettiva.
+Per la richiesta di Prenotazione di una Struttura ricettiva rappresentiamo: Data di inizio soggiorno, Data di fine soggiorno, Numero di 
+ospiti e Stato di accettazione da parte della Struttura Ricettiva.
 
 
 ### 1.3.7 Informazioni relative agli Itinerari
-Per Itinerari rappresentiamo:
-- Guide abilitate.
-- Valutazioni dei visitatori composto da un numero di stelle ed un commento.
+Per Itinerari rappresentiamo: Guide abilitate e Valutazioni dei visitatori composto da un numero di stelle ed un commento.
 
 Ogni Itinerario ha un numero di guide abilitate e guide disponibili che sono rappresentate dal sistema.
 Sia i Visitatori che gli Utenti possono lasciare Valutazioni.
 Ogni Itinerario dispone di più Visite guidate.
 
 ### 1.3.8 Informazioni relative alle Guide
-Per Guide rappresentiamo:
-- Licenze.
-- Itinerari disponibili.
-- Valutazioni degli Utenti.
-- Calendario con disponibilità.
+Per Guide rappresentiamo: Licenze, Itinerari disponibili, Valutazioni degli Utenti, Calendario con disponibilità.
 
 Assumiamo che la struttura di valutazione per le Guide sia uniforme rispetto alla valutazione data
 agli Itinerari e che quindi sia composta da un Numero di Stelle ed un Commento.
 
-### 1.3.9 Informazioni sulle visite guidate
-Per Visite Guidate rappresentiamo:
-- Numero massimo di partecipanti.
-- Stato attuale.
-- Guida assegnata.
+Le guide devono avere una licenza per poter tenere delle Visite Guidate a dei Visitatori. 
+
+### 1.3.9 Informazioni sulle Visite Guidate
+Le visite guidate sono prenotabili dagli Utenti all'interno del sistema e possono essere molteplici per uno specifico itinerario.
+Le visite guidate sono dirette e assegnate ad sola guida abilitata.
+
+Per Visite Guidate rappresentiamo: Numero massimo di partecipanti, Stato attuale e Guida assegnata.
