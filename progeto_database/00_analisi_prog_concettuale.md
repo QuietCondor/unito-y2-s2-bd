@@ -229,27 +229,35 @@ Info sulle guide:
 > itinerari, viene mostrato il numero di guide abilitate e il numero di quelle disponibili. 
 
 ### Info estrapolate:
-Info sul sistema:
-- Consentire la prenotazione di visite guidate in orari specifici .
-- Le visite guidate vanno fatte con delle guide
-- Mantiene un registro delle guide disponibili.
-- Pagina degli itinerari:
-  - Numero di guide abilitate
-  - Numero di guide disponibili
+> Il sistema permette di prenotare visite guidate in orari specifici con delle guide abilitate i cui 
+> estremi [...] sono resi disponibili agli operatori turistici ed ai visitatori.
 
-Dati delle guide: resi disponibili a operatori turistici e visitatori.
-- Licenze
-- Itinerari disponibili
-- Valutazioni
-- Calendario con le loro disponibilità
+Informazioni sul sistema:
+- Permette la prenotazione di visite guidate con delle guide abilitate.
+- Consente la consultazione degli estremi delle guide a operatori turistici e visitatori.
 
-Dati degli itinerari:
-- (1, N) guide abilitate
+Informazioni sulle Guide Abilitate:
+- Licenze (0, N)
+- Itinerari disponibili (0,N)
+- Valutazioni degli utenti (0,N)
+- Calendario con disponibilità (0,N)
 
+Informazioni sugli Utenti:
+- Ruoli:
+  - Operatore Turistico
+  - Visitatore
 
-### Sinonimi trovati
-- Visite guidate = itinerari
+> Ogni  itinerario  può  essere  associato  a  una  o  più  guide  abilitate [...]
 
+Informazioni sugli itinerari:
+- Associato a Guide abilitate (0,N)
+
+> [...] il sistema mantiene un registro aggiornato delle guide disponibili in ogni momento. Nella pagina 
+> degli itinerari, viene mostrato il numero di guide abilitate e il numero di quelle disponibili. 
+
+Informazioni sul Sistema:
+- Prevede delle pagine di consultazione degli itinerari di un'area protetta:
+  - Consente la consultazione delle guide disponibili e delle guide abilitate
 
 ## Decimo paragrafo:
 > Per  quanto  riguarda  le  visite  guidate,  il  sistema  organizza  un  numero  definito  di  tour 
@@ -259,15 +267,31 @@ Dati degli itinerari:
 > servizi offerti.
 
 ### Info estrapolate:
+
+> Per  quanto  riguarda  le  visite  guidate,  il  sistema  organizza  un  numero  definito  di  tour 
+> programmati per ogni itinerario [...].
+
 Info sul sistema:
 - Organizza un numero definito di tour programmati per ogni itinerario.
+
+> [...] ciascuno con un numero massimo di partecipanti, uno stato 
+> attuale e una guida assegnata tra quelle abilitate.
 
 Informazioni sulle visite guidate:
 - Numero massimo di partecipanti
 - Stato attuale
-- 1 Guida assegnata
-- Presenza di Storico delle visite annuali
+- Guida assegnata (1,1)
 
+> I gestori del parco possono consultare uno 
+> storico delle visite effettuate in ogni anno [...]
+
+Informazioni sugli Utenti:
+- Ruoli:
+  - [...]
+  - Gestore del parco
+
+Informazioni sul Sistema:
+- Possibilità di consultazione di storico delle visite annuali da parte dei gestori del parco
 
 ### Sinonimi trovati
 - Tour <> Visite guidate
@@ -282,14 +306,20 @@ Informazioni sulle visite guidate:
       - Una pagina dedicata con le ultime notizie.
       - Una pagina o area con informazioni sui centri visita.
   - Tiene traccia dei dati di presenza.
-  - Conserva le valutazioni date dai visitatori a itinerari e guide.
+  - Prevede delle pagine di consultazione degli itinerari di un'area protetta:
+    - Consente la consultazione delle guide disponibili e delle guide abilitate
 - Fornire strumenti per:
   - Pianificazione di visite.
+    - Permette la prenotazione di visite guidate con delle guide abilitate.
+      - Conserva le valutazioni date dai visitatori a itinerari e guide.
+      - Organizza un numero definito di tour programmati per ogni itinerario.
   - Gestione delle aree protette.
   - Gestione dei servizi forniti.
-- Fornisce informazioni sulle strutture ricettive (0,N) per ogni area protetta.
+    - Possibilità di invio richieste di prenotazione alle strutture ricettive da parte degli utenti.
+    - Fornisce informazioni sulle strutture ricettive (0,N) per ogni area protetta.
 - Prevede la gestione di (0,N) utenti
-- Possibilità di invio richieste di prenotazione alle strutture ricettive da parte degli utenti.
+  - Consente la consultazione degli estremi delle guide a operatori turistici e visitatori.
+  - Possibilità di consultazione di storico delle visite annuali da parte dei gestori del parco.
 
 
 ## Informazioni sulle aree protette
@@ -355,6 +385,10 @@ Info da avere per ogni str. ricettiva:
 Info su ogni utente:
 - username
 - password
+- Ruolo:
+  - Gestore del parco
+  - Operatore Turistico
+  - Visitatore
 
 ## Informazioni sulle prenotazioni per le str. ricettive
 Info su relazione di richiesta utente-str.ricettiva:
@@ -377,6 +411,7 @@ Info sui dati di presenza nelle aree protette:
 ## Informazioni sugli itinerari
 
 Info sui itinerari:
+- Associato a Guide abilitate (0,N)
 - Giudizio dei visitatori: 
   - stelle
   - commento
@@ -384,9 +419,18 @@ Info sui itinerari:
 ## Informazioni sulle guide
 
 Info sulle guide:
-- Guidizio dei visitatori:
+- Licenze (0, N)
+- Itinerari disponibili (0,N)
+- Valutazioni degli utenti (0,N)
   - stelle
   - commento
+- Calendario con disponibilità (0,N)
+
+## Informazioni sulle visite guidate
+Informazioni sulle visite guidate:
+- Numero massimo di partecipanti
+- Stato attuale
+- Guida assegnata (1,1)
 
 # Glossario dei termini
 <table>
@@ -442,12 +486,15 @@ Info sulle guide:
     <td>Itinerari</td>
     <td>Descrive i percorsi disponibili all'interno di un'area protetta che possono essere percorsi da un visitatore.</td>
     <td>Percorsi</td>
-    <td>Area Protetta, Visitatore</td>
+    <td>Area Protetta, Visitatore, Visite Guidate, Guida</td>
   </tr>
   <tr>
     <td>Guida</td>
-    <td>Professionista incaricato di accompagnare visitatori in visite guidate all'interno dell'area protetta.</td>
-    <td></td>
+    <td>
+      Professionista abilitato incaricato di accompagnare visitatori in visite guidate all'interno 
+      dell'area protetta.
+    </td>
+    <td>Guida Abilitata</td>
     <td>Area Protetta, Visitatore</td>
   </tr>
   <tr>
@@ -458,5 +505,41 @@ Info sulle guide:
     </td>
     <td>Feedback, Valutazione</td>
     <td>Area Protetta, Visitatore, Itinerari</td>
+  </tr>
+  <tr>
+    <td>Visita Guidata</td>
+    <td>
+      Visita ad uno o più itinerari di un'area protetta da parte dei visitatori organizzata insieme ad una 
+      Guida Abilitata.
+    </td>
+    <td>Tour programmato</td>
+    <td>Area Protetta, Visitatore, Itinerari, Guida</td>
+  </tr>
+  <tr>
+    <td>Operatore Turistico</td>
+    <td>
+      Soggetti terzi che collaborano con l'organizzazione delle visite guidate negli itinerari delle
+      aree protette.
+    </td>
+    <td></td>
+    <td>Visitatore, Area Protetta, Visita Guidata, Itinerari, Aree protette</td>
+  </tr>
+  <tr>
+    <td>Licenza</td>
+    <td>
+      Licenza abilitante che consente ad una Guida la possibilità di agire come Guida turistica e 
+      quindi di effettuare delle visite guidate con i visitatori.
+    </td>
+    <td></td>
+    <td>Guida, Visitatore, Visita Guidata</td>
+  </tr>
+  <tr>
+    <td>Gestore del Parco</td>
+    <td>
+      Utente con permessi speciali per la consultazione degli storici delle visite annuali per una
+      determinata area protetta.
+    </td>
+    <td></td>
+    <td>Utenti, Area Protetta, Visita Guidata</td>
   </tr>
 </table>
