@@ -293,9 +293,6 @@ Informazioni sugli Utenti:
 Informazioni sul Sistema:
 - Possibilità di consultazione di storico delle visite annuali da parte dei gestori del parco
 
-### Sinonimi trovati
-- Tour <> Visite guidate
-
 # Informazioni
 
 ## Informazioni sul sistema
@@ -397,7 +394,7 @@ Info su relazione di richiesta utente-str.ricettiva:
 - N. di ospiti
 - Stato di accettazione da parte della str. ricettiva
 
-## Informazioni sulle aree di presenza delle aree protette
+## Informazioni sui dati di presenza delle aree protette
 Info sui dati di presenza nelle aree protette:
 - Orario di entrata
 - Orario di uscita
@@ -439,6 +436,15 @@ Informazioni sulle visite guidate:
     <th>Descrizione</th>
     <th>Sinonimi</th>
     <th>Collegamenti</th>
+  </tr>
+  <tr>
+    <td>Sito</td>
+    <td>
+      Sistema informatico che consente l'accesso, consultazione, gestione e il monitoraggio
+      delle aree protette italiane.
+    </td>
+    <td>Sistema</td>
+    <td>Area Protetta</td>
   </tr>
   <tr>
     <td>Area Protetta</td>
@@ -512,7 +518,7 @@ Informazioni sulle visite guidate:
       Visita ad uno o più itinerari di un'area protetta da parte dei visitatori organizzata insieme ad una 
       Guida Abilitata.
     </td>
-    <td>Tour programmato</td>
+    <td>Tour programmato, Visita</td>
     <td>Area Protetta, Visitatore, Itinerari, Guida</td>
   </tr>
   <tr>
@@ -541,5 +547,14 @@ Informazioni sulle visite guidate:
     </td>
     <td></td>
     <td>Utenti, Area Protetta, Visita Guidata</td>
+  </tr>
+  <tr>
+    <td>Dati di presenza</td>
+    <td>
+      Definisce dei dati estrapolabili dal sistema che consentono di analizzare le presenze di visitatori all'interno delle
+      aree protette.
+    </td>
+    <td></td>
+    <td>Visitatore, Area Protetta, Visita Guidata</td>
   </tr>
 </table>

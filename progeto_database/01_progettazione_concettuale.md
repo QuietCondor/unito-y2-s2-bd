@@ -61,19 +61,317 @@ servizi offerti.
 
 ## 1.2 Glossario dei termini
 
+<table>
+  <tr>
+    <th>Termine</th>
+    <th>Descrizione</th>
+    <th>Sinonimi</th>
+    <th>Collegamenti</th>
+  </tr>
+  <tr>
+    <td>Sito</td>
+    <td>
+      Sistema informatico che consente l'accesso, consultazione, gestione e il monitoraggio
+      delle aree protette italiane.
+    </td>
+    <td>Sistema</td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Area Protetta</td>
+    <td>Territori ricchi di biodiversità e beni archeologici, storici architettonici e artistici.</td>
+    <td>Parco</td>
+    <td>Ente</td>
+  </tr>
+  <tr>
+    <td>Ente</td>
+    <td>Ente incaricato della gestione del parco.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Notizia</td>
+    <td>Notizie riguardanti le aree protette per tenere aggiornati gli utenti.</td>
+    <td>Novità</td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Centro Visita</td>
+    <td>Luoghi di informazione e accoglienza per i visitatori.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Struttura Ricettiva</td>
+    <td>Struttura che dà la possibilità di trovare sistemazione con eventuale fruizione di assistenza e/o servizi.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Visitatore</td>
+    <td>Persona che decide o ha l'interesse di visitare l'area protetta.</td>
+    <td></td>
+    <td>Area Protetta</td>
+  </tr>
+  <tr>
+    <td>Utente</td>
+    <td>Visitatore registrato nel sistema che può effettuare delle prenotazioni alle strutture ricettive.</td>
+    <td>Profilo</td>
+    <td>Struttura Ricettiva, Visitatore</td>
+  </tr>
+  <tr>
+    <td>Itinerari</td>
+    <td>Descrive i percorsi disponibili all'interno di un'area protetta che possono essere percorsi da un visitatore.</td>
+    <td>Percorsi</td>
+    <td>Area Protetta, Visitatore, Visite Guidate, Guida</td>
+  </tr>
+  <tr>
+    <td>Guida</td>
+    <td>
+      Professionista abilitato incaricato di accompagnare visitatori in visite guidate all'interno 
+      dell'area protetta.
+    </td>
+    <td>Guida Abilitata</td>
+    <td>Area Protetta, Visitatore</td>
+  </tr>
+  <tr>
+    <td>Valutazione</td>
+    <td>
+      Recensione fornita dai visitatori delle aree geografiche nei confronti degli intinerari e delle guide.
+      Consiste in una scelta del numero di stelle rappresentanti la positività dell'esperienza e un 
+      commento.
+    </td>
+    <td>Feedback, Giudizio</td>
+    <td>Area Protetta, Visitatore, Itinerari</td>
+  </tr>
+  <tr>
+    <td>Visita Guidata</td>
+    <td>
+      Visita ad uno o più itinerari di un'area protetta da parte dei visitatori organizzata insieme ad una 
+      Guida Abilitata.
+    </td>
+    <td>Tour programmato, Visita</td>
+    <td>Area Protetta, Visitatore, Itinerari, Guida</td>
+  </tr>
+  <tr>
+    <td>Operatore Turistico</td>
+    <td>
+      Soggetti terzi che collaborano con l'organizzazione delle visite guidate negli itinerari delle
+      aree protette. Hanno la possibilità di vedere gli estremi delle Guide.
+    </td>
+    <td></td>
+    <td>Visitatore, Area Protetta, Visita Guidata, Itinerari, Aree protette, Guide</td>
+  </tr>
+  <tr>
+    <td>Licenza</td>
+    <td>
+      Licenza abilitante che consente ad una Guida la possibilità di agire come Guida turistica e 
+      quindi di effettuare delle visite guidate con i visitatori.
+    </td>
+    <td></td>
+    <td>Guida, Visitatore, Visita Guidata</td>
+  </tr>
+  <tr>
+    <td>Gestore del Parco</td>
+    <td>
+      Utente con permessi speciali per la consultazione degli storici delle visite annuali per una
+      determinata area protetta.
+    </td>
+    <td></td>
+    <td>Utenti, Area Protetta, Visita Guidata</td>
+  </tr>
+  <tr>
+    <td>Dati di presenza</td>
+    <td>
+      Definisce dei dati estrapolabili dal sistema che consentono di analizzare le presenze di visitatori all'interno delle
+      aree protette.
+    </td>
+    <td></td>
+    <td>Visitatore, Area Protetta, Visita Guidata</td>
+  </tr>
+</table>
 
 
+## 1.3 Requisiti rivisti e strutturati in gruppi di frasi omogenee.
 
-## 1.3 Requisiti rivisti
+### 1.3.1 Informazioni di carattere generale
+Si vuole realizzare una base di dati per un sistema che raccoglie e organizza tutte le informazioni relative alle aree protette italiane.
 
-### 1.3.1 Frasi di carattere generale
-Si vuole realizzare una base di dati per un'applicazione che raccoglie e organizza tutte le informazioni relative alle aree protette italiane.
-La base di dati deve permettere:
-- La consultazione di:
-    - Aree protette.
-    - Informazioni sui centri visita sufficienti per facilitare l'organizzazione di visite e percorsi.
-    - Elenchi di strutture ricettive nelle vicinanze.
-    - Informazioni relative alle escursioni come tragitti, punti di partenza ecc.
-- La possibilita' di:
-    - Recensire le Aree protette.
-    - Prenotare visite guidate con orari e guide specifiche. 
+La base di dati deve permettere al sistema di:
+- Visualizzare:
+    - Le aree protette raggruppate per regione.
+    - Informazioni di dettaglio delle aree protette con:
+        - Le ultime notizie.
+        - Informazioni sui centri visita.
+        - Itinerari.
+        - Lo storico delle visite guidate annuali.
+        - Informazioni sulle strutture ricettive.
+    - Informazioni di dettaglio degli itinerari di un'area protetta con:
+        - Guide disponibili.
+        - Guide abilitate.
+        - Valutazioni dei visitatori.
+    - I dati di presenza delle aree protette [[1]](#1312-dettagli-sui-dati-di-presenza-nelle-aree-protette).
+    - I dati delle guide.
+- Fornire strumenti per:
+    - Gestire visite guidate con guide abilitate. Con operazioni di:
+        - Pianificazione.
+        - Valutazioni a itinerari e guide.
+    - Organizzare visite guidate per ogni itinerario.
+    - Gestire le aree protette.
+    - Richiedere prenotazioni alle strutture ricettive.
+    - Gestire utenti registrati al sistema stesso.
+
+#### 1.3.1.2 Dettagli sui Dati di presenza nelle Aree Protette:
+Nei Dati di Presenza delle Aree Protette rappresentiamo:
+- Orario di entrata.
+- Orario di uscita.
+- Tipologia di Visitatore.
+- Itinerari percorsi.
+
+Per tipologia di visitatore rappresentiamo come valori:
+- Senior.
+- Bambini.
+- Gruppi scolastici.
+- Altri gruppi.
+
+### 1.3.2 Informazioni relative alle Aree Protette
+Per Area Protetta rappresentiamo:
+- Codice Identificativo.
+- Nome.
+- Regione.
+- Tipologia.
+- Ente incaricato della gestione.
+- Provvedimento che ne ha portato l'istituzione.
+- Superfice terrestre.
+- Superfice marina.
+- Km di costa.
+- Eventuali altre informazioni utili.
+- Programmi di certificazione.
+- Itinerari al suo interno.
+
+A supporto e integrazione delle definizioni e valori dei singoli campi, si utilizzerà il:
+- [sito ufficiale del ministero dell'ambiente e della sicurezza energetica](https://www.mase.gov.it/pagina/classificazione-delle-aree-naturali-protette)
+- [elenco ufficiale presente nel sito ufficiale del ministero dell'ambiente e della sicurezza energetica](https://www.mase.gov.it/sites/default/files/archivio/normativa/dm_27_04_2010.pdf)
+presenti come fonte nei requisiti iniziali o derivati diretti da esse.
+
+Per Codice Identificativo, rappresentiamo i valori in formato alfanumerico.
+
+Per Tipologia, rappresentiamo i valori come:
+- Parchi nazionali.
+- Parchi naturali regionali e interregionali.
+- Riserve naturali.
+- Zone umide di interesse internazionale.
+- Altre aree naturali protette.
+- Aree di reperimento terrestri e marine.
+
+
+### 1.3.3 Informazioni relative alle Notizie
+Le Notizie contengono informazioni relative ad aggiornamenti o eventi riguardo le Aree Protette.
+
+Per Notizia rappresentiamo:
+- Data.
+- Foto.
+- Testo.
+
+Per quanto concerne la foto, si suppone che il sistema abbia integrazioni esterne per la storicizzazione
+delle immagini (es: Servizi in cloud come [Il blob storage di Azure](https://azure.microsoft.com/en-us/products/storage/blobs))
+che consentono quindi al sistema di rappresentare la foto come semplice URL di rimando alla risorsa
+presenti su tali sistemi esterni.
+
+### 1.3.4 Informazioni relative ai Centri Visita
+Per Centro Visita rappresentiamo:
+- Nome
+- Titolo sommario
+- Indirizzo
+- Descrizione
+- Logo
+- Orari
+- Modalità di fruizione
+
+In cui:
+Per Indirizzo rappresentiamo:
+    - Via
+    - Cap
+    - Comune
+    - Frazione
+    - Regione
+
+Per Orari rappresentiamo:
+    - Mesi di apertura
+    - Giorno sett. di apertura
+        - Range orario di apertura al mattino
+        - Range orario di apertura al pomeriggio
+
+In cui le informazioni di dettaglio di indirizzi e orari, sono inferite dall'immagine di esempio fornita
+nei [Requisiti iniziali](#11-requisiti-iniziali).
+
+### 1.3.5 Informazioni relative alle Strutture Ricettive
+Per Struttura Ricettiva rappresentiamo:
+- Nome.
+- Indirizzo.
+- Contatti.
+- Servizi offerti.
+- Trattamenti disponibili.
+- Impegni ecologici.
+- Possibilità di ospitare scuole o gruppi
+  - Disponibilità di parcheggi adeguati
+
+In cui supponiamo che la struttura degli indirizzi sia la stessa vista e definita nelle
+[Informazioni relative ai Centri Visita](#134-informazioni-relative-ai-centri-visita).
+
+### 1.3.6 Informazioni relative agli Utenti
+Per utente rappresentiamo:
+- Username.
+- Password. [[1]](#1361-dettagli-sulla-password)
+- Ruolo. [[2]](#1362-dettagli-sui-ruoli-degli-utenti)
+
+Gli Utenti sono in grado di effettuare recensioni di Itinerari e Guide ed effettuare
+delle prenotazioni nelle strutture ricettive [[3]](#1363-dettagli-sulle-prenotazioni-di-strutture-ricettive).
+
+#### 1.3.6.1 Dettagli sulla Password
+Per Password rappresentiamo un hash o un'informazione crittografata in quanto assumiamo che per motivi di sicurezza non venga salvata la password in chiaro.
+
+#### 1.3.6.2 Dettagli sui Ruoli degli Utenti
+Per Ruolo rappresentiamo come valori possibili:
+- Gestore del Parco
+- Operatore Turistico
+- Visitatore Registrato
+
+In quanto si inferisce dal testo che i diversi ruoli hanno significati distinti:
+- Gestore del parco: Consente la consultazione degli storici sulle visite delle aree protette.
+- Operatore Turistico: Consente la visualizzazione dei dati delle guide.
+- Visitatore Registrato: Definisce l'utente base rappresentante il visitatore che si è registrato
+                         sulla piattaforma.
+
+#### 1.3.6.3 Dettagli sulle Prenotazioni di Strutture Ricettive
+Per la richiesta di Prenotazione di una Struttura ricettiva rappresentiamo:
+- Data di inizio soggiorno.
+- Data di fine soggiorno.
+- N. di ospiti.
+- Stato di accettazione da parte della Struttura Ricettiva.
+
+
+### 1.3.7 Informazioni relative agli Itinerari
+Per Itinerari rappresentiamo:
+- Guide abilitate.
+- Valutazioni dei visitatori composto da un numero di stelle ed un commento.
+
+Ogni Itinerario ha un numero di guide abilitate e guide disponibili che sono rappresentate dal sistema.
+Sia i Visitatori che gli Utenti possono lasciare Valutazioni.
+Ogni Itinerario dispone di più Visite guidate.
+
+### 1.3.8 Informazioni relative alle Guide
+Per Guide rappresentiamo:
+- Licenze.
+- Itinerari disponibili.
+- Valutazioni degli Utenti.
+- Calendario con disponibilità.
+
+Assumiamo che la struttura di valutazione per le Guide sia uniforme rispetto alla valutazione data
+agli Itinerari e che quindi sia composta da un Numero di Stelle ed un Commento.
+
+### 1.3.9 Informazioni sulle visite guidate
+Per Visite Guidate rappresentiamo:
+- Numero massimo di partecipanti.
+- Stato attuale.
+- Guida assegnata.
